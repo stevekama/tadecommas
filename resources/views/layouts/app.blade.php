@@ -37,18 +37,16 @@
 
     <!-- Modernizr JS -->
     <script src="{{ asset('js/vendor/modernizr-2.8.3.min.js')}}"></script>
-
 </head>
-
 <body>
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+    <![endif]-->  
 
     <!-- Body main wrapper start -->
     <div class="wrapper fixed__footer">
-        <!-- Start Header Style -->
-        <header id="header" class="htc-header header--3 bg__white">
+         <!-- Start Header Style -->
+         <header id="header" class="htc-header header--3 bg__white">
             <!-- Start Mainmenu Area -->
             <div id="sticky-header-with-topbar" class="mainmenu__area sticky__header">
                 <div class="container">
@@ -56,7 +54,7 @@
                         <div class="col-md-2 col-lg-2 col-sm-3 col-xs-3">
                             <div class="logo">
                                 <a href="/">
-                                    <img src="{{ asset('images/logo/logo.png')}}" alt="logo">
+                                    <img src="{{ Storage::disk('local')->url('logo/logo.png')}}" alt="logo">
                                 </a>
                             </div>
                         </div>
@@ -65,86 +63,29 @@
                             <nav class="mainmenu__nav hidden-xs hidden-sm">
                                 <ul class="main__menu">
                                     <li class="drop"><a href="/">Home</a></li>
-
                                     <li class="drop">
                                         <a href="/shop">Shop</a>
-                                        <ul class="dropdown mega_dropdown">
-                                            <!-- Start Single Mega MEnu -->
-                                            <li><a class="mega__title" href="shop.html">shop layout</a>
-                                                <ul class="mega__item">
-                                                    <li><a href="/shop">default shop</a></li>
-                                                </ul>
-                                            </li>
-                                            <!-- End Single Mega MEnu -->
-                                            <!-- Start Single Mega MEnu -->
-                                            <li><a class="mega__title" href="/shop">product details layout</a>
-                                                <ul class="mega__item">
-                                                    <li><a href="product-details.html">tab style 1</a></li>
-                                            </li>
-                                        </ul>
                                     </li>
-                                    <!-- End Single Mega MEnu -->
-                                    <!-- Start Single Mega MEnu -->
-                                    <li>
-                                        <ul class="mega__item">
-                                            <li>
-                                                <div class="mega-item-img">
-                                                    <a href="/shop">
-                                                        <img src="{{ asset('images/feature-img/3.png')}}" alt="">
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                    <li class="drop">
+                                        <a href="/blog">Blog</a>
                                     </li>
-                                    <!-- End Single Mega MEnu -->
-                                </ul>
-                                </li>
-                                <li class="drop"><a href="blog.html">Blog</a>
-                                    <ul class="dropdown">
-                                        <li><a href="blog.html">blog 3 column</a></li>
-                                        <li><a href="blog-details.html">Blog details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="/contact">contact</a></li>
+                                    <li><a href="/contact">contact</a></li>
                                 </ul>
                             </nav>
                             <div class="mobile-menu clearfix visible-xs visible-sm">
                                 <nav id="mobile_dropdown">
                                     <ul>
                                         <li><a href="/">Home</a></li>
-                                        <li><a href="#">shop</a>
-                                            <ul>
-                                                <li><a href="portfolio-card-box-2.html">portfolio</a></li>
-                                                <li><a href="single-portfolio.html">Single portfolio</a></li>
-                                            </ul>
+                                        <li><a href="/shop">shop</a>
                                         </li>
-                                        <li><a href="blog.html">blog</a>
-                                            <ul>
-                                                <li><a href="blog.html">blog 3 column</a></li>
-                                                <li><a href="blog-details.html">Blog details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">pages</a>
-                                            <ul>
-                                                <li><a href="about.html">about</a></li>
-                                                <li><a href="customer-review.html">customer review</a></li>
-                                                <li><a href="shop.html">shop</a></li>
-                                                <li><a href="shop-sidebar.html">shop sidebar</a></li>
-                                                <li><a href="product-details.html">product details</a></li>
-                                                <li><a href="cart.html">cart</a></li>
-                                                <li><a href="wishlist.html">wishlist</a></li>
-                                                <li><a href="checkout.html">checkout</a></li>
-                                                <li><a href="team.html">team</a></li>
-                                                <li><a href="login-register.html">login & register</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><a href="/blog">blog</a></li>
                                         <li><a href="/contact">contact</a></li>
                                     </ul>
                                 </nav>
-                            </div>
+                            </div>                          
                         </div>
                         <!-- End MAinmenu Ares -->
-                        <div class="col-md-2 col-sm-4 col-xs-3">
+                        <div class="col-md-2 col-sm-4 col-xs-3">  
                             <ul class="menu-extra">
                                 <li class="search search__open hidden-xs"><span class="ti-search"></span></li>
                                 <li><a href="login-register.html"><span class="ti-user"></span></a></li>
@@ -159,17 +100,15 @@
             <!-- End Mainmenu Area -->
         </header>
         <!-- End Header Style -->
-
         <div class="body__overlay"></div>
-
+        
         <!-- Start Offset Wrapper -->
         <div class="offset__wrapper">
-
             <!-- Start Search Popap -->
             <div class="search__area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
+                <div class="container" >
+                    <div class="row" >
+                        <div class="col-md-12" >
                             <div class="search__inner">
                                 <form action="#" method="get">
                                     <input placeholder="Search here... " type="text">
@@ -184,7 +123,7 @@
                 </div>
             </div>
             <!-- End Search Popap -->
-
+            
             <!-- Start Offset MEnu -->
             <div class="offsetmenu">
                 <div class="offsetmenu__inner">
@@ -193,8 +132,8 @@
                     </div>
                     <div class="off__contact">
                         <div class="logo">
-                            <a href="index.html">
-                                <img src="{{ asset('images/logo/logo.png')}}" alt="logo">
+                            <a href="/">
+                                <img src="{{ Storage::disk('local')->url('logo/logo.png')}}" alt="logo">
                             </a>
                         </div>
                         <p>Lorem ipsum dolor sit amet consectetu adipisicing elit sed do eiusmod tempor incididunt ut labore.</p>
@@ -230,8 +169,8 @@
                     <div class="offset__sosial__share">
                         <h4 class="offset__title">Follow Us On Social</h4>
                         <ul class="off__soaial__link">
-                            <li><a class="bg--twitter" href="#" title="Twitter"><i class="zmdi zmdi-twitter"></i></a></li>
-
+                            <li><a class="bg--twitter" href="#"  title="Twitter"><i class="zmdi zmdi-twitter"></i></a></li>
+                            
                             <li><a class="bg--instagram" href="#" title="Instagram"><i class="zmdi zmdi-instagram"></i></a></li>
 
                             <li><a class="bg--facebook" href="#" title="Facebook"><i class="zmdi zmdi-facebook"></i></a></li>
@@ -299,151 +238,20 @@
         <!-- End Offset Wrapper -->
 
         @yield('content')
-
-        <!-- Start Footer Area -->
-        <footer class="htc__foooter__area gray-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="footer__container clearfix">
-                        <!-- Start Single Footer Widget -->
-                        <div class="col-md-3 col-lg-3 col-sm-6">
-                            <div class="ft__widget">
-                                <div class="ft__logo">
-                                    <a href="index.html">
-                                        <img src="{{ asset('images/logo/logo.png')}}" alt="footer logo">
-                                    </a>
-                                </div>
-                                <div class="footer-address">
-                                    <ul>
-                                        <li>
-                                            <div class="address-icon">
-                                                <i class="zmdi zmdi-pin"></i>
-                                            </div>
-                                            <div class="address-text">
-                                                <p>194 Main Rd T, FS Rayed <br> VIC 3057, USA</p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="address-icon">
-                                                <i class="zmdi zmdi-email"></i>
-                                            </div>
-                                            <div class="address-text">
-                                                <a href="#"> info@example.com</a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="address-icon">
-                                                <i class="zmdi zmdi-phone-in-talk"></i>
-                                            </div>
-                                            <div class="address-text">
-                                                <p>+012 345 678 102 </p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <ul class="social__icon">
-                                    <li><a href="#"><i class="zmdi zmdi-twitter"></i></a></li>
-                                    <li><a href="#"><i class="zmdi zmdi-instagram"></i></a></li>
-                                    <li><a href="#"><i class="zmdi zmdi-facebook"></i></a></li>
-                                    <li><a href="#"><i class="zmdi zmdi-google-plus"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- End Single Footer Widget -->
-                        <!-- Start Single Footer Widget -->
-                        <div class="col-md-3 col-lg-2 col-sm-6 smt-30 xmt-30">
-                            <div class="ft__widget">
-                                <h2 class="ft__title">Categories</h2>
-                                <ul class="footer-categories">
-                                    <li><a href="shop-sidebar.html">Men</a></li>
-                                    <li><a href="shop-sidebar.html">Women</a></li>
-                                    <li><a href="shop-sidebar.html">Accessories</a></li>
-                                    <li><a href="shop-sidebar.html">Shoes</a></li>
-                                    <li><a href="shop-sidebar.html">Dress</a></li>
-                                    <li><a href="shop-sidebar.html">Denim</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- Start Single Footer Widget -->
-                        <div class="col-md-3 col-lg-2 col-sm-6 smt-30 xmt-30">
-                            <div class="ft__widget">
-                                <h2 class="ft__title">Infomation</h2>
-                                <ul class="footer-categories">
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#">Returns & Exchanges</a></li>
-                                    <li><a href="#">Shipping & Delivery</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- Start Single Footer Widget -->
-                        <div class="col-md-3 col-lg-3 col-lg-offset-1 col-sm-6 smt-30 xmt-30">
-                            <div class="ft__widget">
-                                <h2 class="ft__title">Newsletter</h2>
-                                <div class="newsletter__form">
-                                    <p>Subscribe to our newsletter and get 10% off your first purchase .</p>
-                                    <div class="input__box">
-                                        <div id="mc_embed_signup">
-                                            <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                                <div id="mc_embed_signup_scroll" class="htc__news__inner">
-                                                    <div class="news__input">
-                                                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required>
-                                                    </div>
-                                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
-                                                    <div class="clearfix subscribe__btn"><input type="submit" value="Send" name="subscribe" id="mc-embedded-subscribe" class="bst__btn btn--white__color">
-
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Footer Widget -->
-                    </div>
-                </div>
-                <!-- Start Copyright Area -->
-                <div class="htc__copyright__area">
-                    <div class="row">
-                        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
-                            <div class="copyright__inner">
-                                <div class="copyright">
-                                    <p>© 2017 <a href="https://freethemescloud.com/">Free themes Cloud</a>
-                                        All Right Reserved.</p>
-                                </div>
-                                <ul class="footer__menu">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="shop.html">Product</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Copyright Area -->
-            </div>
-        </footer>
-        <!-- End Footer Area -->
     </div>
-    <!-- Body main wrapper end -->
-
-
-    <!-- jquery latest version -->
-    <script src="{{ asset('js/vendor/jquery-1.12.0.min.js')}}"></script>
-    <!-- Bootstrap framework js -->
-    <script src="{{ asset('js/bootstrap.min.js')}}"></script>
-    <!-- All js plugins included in this file. -->
-    <script src="{{ asset('js/plugins.js')}}"></script>
-    <script src="{{ asset('js/slick.min.js')}}"></script>
-    <script src="{{ asset('js/owl.carousel.min.js')}}"></script>
-    <!-- Waypoints.min.js. -->
-    <script src="{{ asset('js/waypoints.min.js')}}"></script>
-    <!-- Main js file that contents all jQuery plugins activation. -->
-    <script src="{{ asset('js/main.js')}}"></script>s
+    <!-- END QUICKVIEW PRODUCT -->
+     <!-- jquery latest version -->
+     <script src="{{ asset('js/vendor/jquery-1.12.0.min.js')}}"></script>
+     <!-- Bootstrap framework js -->
+     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+     <!-- All js plugins included in this file. -->
+     <script src="{{ asset('js/plugins.js')}}"></script>
+     <script src="{{ asset('js/slick.min.js')}}"></script>
+     <script src="{{ asset('js/owl.carousel.min.js')}}"></script>
+     <!-- Waypoints.min.js. -->
+     <script src="{{ asset('js/waypoints.min.js')}}"></script>
+     <!-- Main js file that contents all jQuery plugins activation. -->
+     <script src="{{ asset('js/main.js')}}"></script>s
 </body>
-
+ 
 </html>

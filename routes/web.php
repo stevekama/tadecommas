@@ -11,4 +11,10 @@
 |
 */
 
-Route::get('/', 'ProductsController@index');
+Route::get('/', 'PagesController@index');
+
+Route::get('/shop', 'PagesController@shop');
+
+Route::get('/blog', 'PagesController@blog');
+
+Route::get('/contact', 'PagesController@contact');
